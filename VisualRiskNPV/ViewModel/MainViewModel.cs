@@ -52,7 +52,7 @@ namespace VisualRiskNPV.ViewModel
 
         #endregion " Command "
 
-        #region Method
+        #region " Method "
 
         public void OnCalculate()
         {
