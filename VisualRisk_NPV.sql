@@ -1,0 +1,28 @@
+CREATE DATABASE VisualRisk1
+GO
+
+USE [VisualRisk]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Npv](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[InitialValue] [decimal](18, 2) NOT NULL,
+	[CashFlowAmount] [decimal](18, 2) NOT NULL,
+	[DiscountRate] [decimal](18, 2) NOT NULL,
+	[NPV] [decimal](18, 2) NOT NULL,
+	[DateCreated] [datetime] NOT NULL,
+ CONSTRAINT [PK_dbo.Npv] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+

@@ -1,0 +1,16 @@
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\bin\Debug\VirtualRiskNPV.exe.config
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\bin\Debug\VirtualRiskNPV.exe
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\bin\Debug\VirtualRiskNPV.pdb
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\View\MainWindow.g.cs
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\App.g.cs
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\VirtualRiskNPV_MarkupCompile.cache
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\VirtualRiskNPV_MarkupCompile.lref
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\View\MainWindow.baml
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\VirtualRiskNPV.g.resources
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\VirtualRiskNPV.Properties.Resources.resources
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\VirtualRiskNPV.csproj.GenerateResource.cache
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\VirtualRiskNPV.csproj.CoreCompileInputs.cache
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\VirtualRiskNPV.exe
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\VirtualRiskNPV.pdb
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\VirtualRiskNPV.csprojAssemblyReference.cache
+C:\ActiveSolution\VirtualRiskNPV\VirtualRiskNPV\obj\Debug\GeneratedInternalTypeHelper.g.cs
