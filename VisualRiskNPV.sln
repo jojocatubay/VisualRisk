@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualRiskNPV", "VisualRiskNPV\VisualRiskNPV.csproj", "{8BD82771-15C5-4515-9458-DDB1C9A3B169}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualRiskNVPTest", "VisualRiskNVPTest\VisualRiskNVPTest.csproj", "{6CDE1D01-C09F-438E-85C9-7A8E753820B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8BD82771-15C5-4515-9458-DDB1C9A3B169}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BD82771-15C5-4515-9458-DDB1C9A3B169}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BD82771-15C5-4515-9458-DDB1C9A3B169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CDE1D01-C09F-438E-85C9-7A8E753820B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CDE1D01-C09F-438E-85C9-7A8E753820B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CDE1D01-C09F-438E-85C9-7A8E753820B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CDE1D01-C09F-438E-85C9-7A8E753820B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
