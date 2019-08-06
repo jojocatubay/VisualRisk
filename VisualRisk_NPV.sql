@@ -1,4 +1,4 @@
-CREATE DATABASE VisualRisk1
+CREATE DATABASE VisualRisk
 GO
 
 USE [VisualRisk]
