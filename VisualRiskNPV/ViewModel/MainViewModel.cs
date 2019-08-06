@@ -21,6 +21,7 @@ namespace VisualRiskNPV.ViewModel
         public MainViewModel() // Constructor
         {
             NPVModelList = new ObservableCollection<NetPresentationValueModel>();
+            InitializeTestValue();
         }
 
 
@@ -61,36 +62,37 @@ namespace VisualRiskNPV.ViewModel
                 var initialValue = Convert.ToDouble(InitialValue.ToString().Contains("-") ? InitialValue : Convert.ToDecimal("-" + InitialValue));
                 var diff = UpperBoundRate - LowerBoundRate;
                 int numberOfIncrement = Convert.ToInt32(diff / Increment);
-
+                decimal lbr = LowerBoundRate;
                 decimal ValueRate = Increment;
                 for (int i = 1; i <= numberOfIncrement; i++)
                 {
-
                     //CashFlow 1
-                    var discountFactor1 = 1 / Math.Pow(Convert.ToDouble(1 + ValueRate), 1);
+                    var discountFactor1 = 1 / Math.Pow(Convert.ToDouble(1 + lbr), 1);
                     var presentValue1 = discountFactor1 * Convert.ToDouble(CashFlow1);
 
                     //CashFlow 2
-                    var discountFactor2 = 1 / Math.Pow(Convert.ToDouble(1 + ValueRate), 2);
+                    var discountFactor2 = 1 / Math.Pow(Convert.ToDouble(1 + lbr), 2);
                     var presentValue2 = discountFactor2 * Convert.ToDouble(CashFlow2);
 
                     //CashFlow 2
-                    var discountFactor3 = 1 / Math.Pow(Convert.ToDouble(1 + ValueRate), 3);
+                    var discountFactor3 = 1 / Math.Pow(Convert.ToDouble(1 + lbr), 3);
                     var presentValue3 = discountFactor3 * Convert.ToDouble(CashFlow3);
 
                     var totalPresentValue = initialValue + presentValue1 + presentValue2 + presentValue3;
 
                     NetPresentationValueModel netPV = new NetPresentationValueModel();
 
+                    lbr += Increment;
+                    ValueRate += Increment;
+
                     netPV.InitialValue = InitialValue;
-                    netPV.DiscountRate = ValueRate;
+                    netPV.DiscountRate = lbr;
                     netPV.NPV = Convert.ToDecimal(totalPresentValue);
                     netPV.CashFlowAmount = InitialValue + Convert.ToDecimal(totalPresentValue);
                     netPV.DateCreated = DateTime.Now;
 
                     NPVModelList.Add(netPV);
                     this.SaveNPV(netPV.InitialValue, netPV.CashFlowAmount, netPV.DiscountRate, netPV.NPV);
-                    ValueRate += Increment;
                 }
             }
             catch (Exception ex)
@@ -111,6 +113,17 @@ namespace VisualRiskNPV.ViewModel
             this.CashFlow1 = 0;
             this.CashFlow2 = 0;
             this.CashFlow3 = 0;
+        }
+        private void InitializeTestValue()
+        {
+            NetPresentationValueModel netPresentationValue = new NetPresentationValueModel();
+            this.LowerBoundRate = 3.65m;
+            this.UpperBoundRate = 3.70m;
+            this.Increment = 0.010m;
+            this.InitialValue = 100000;
+            this.CashFlow1 = 10000;
+            this.CashFlow2 = 10000;
+            this.CashFlow3 = 10000;
         }
 
 
