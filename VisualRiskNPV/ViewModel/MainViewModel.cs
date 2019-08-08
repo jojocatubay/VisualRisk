@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace VisualRiskNPV.ViewModel
 {
@@ -59,6 +60,9 @@ namespace VisualRiskNPV.ViewModel
         {
             try
             {
+                dynamic initTemp = InitialValue;
+                this.InitialValue = Convert.ToDecimal(Regex.Replace(InitialValue.ToString(), "-",""));
+                
                 var initialValue = Convert.ToDouble(InitialValue.ToString().Contains("-") ? InitialValue : Convert.ToDecimal("-" + InitialValue));
                 var diff = UpperBoundRate - LowerBoundRate;
                 int numberOfIncrement = Convert.ToInt32(diff / Increment);
@@ -85,7 +89,7 @@ namespace VisualRiskNPV.ViewModel
                     lbr += Increment;
                     ValueRate += Increment;
 
-                    netPV.InitialValue = InitialValue;
+                    netPV.InitialValue = initTemp;
                     netPV.DiscountRate = lbr;
                     netPV.NPV = Convert.ToDecimal(totalPresentValue);
                     netPV.CashFlowAmount = InitialValue + Convert.ToDecimal(totalPresentValue);
@@ -94,8 +98,11 @@ namespace VisualRiskNPV.ViewModel
                     NPVModelList.Add(netPV);
                     this.SaveNPV(netPV.InitialValue, netPV.CashFlowAmount, netPV.DiscountRate, netPV.NPV);
                 }
+                InitialValue = initTemp;
             }
+            
             catch (Exception ex)
+
             {
                 MessageBox.Show(ex.Message + " Fill all filelds with correct values.","Net Presentation Value");
             }
